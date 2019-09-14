@@ -114,7 +114,6 @@ tap "thoughtbot/formulae"
 tap "homebrew/services"
 tap "universal-ctags/universal-ctags"
 tap "caskroom/cask"
-tap "heroku/brew"
 
 # Unix
 brew "universal-ctags", args: ["HEAD"]
@@ -122,15 +121,9 @@ brew "git"
 brew "openssl"
 brew "rcm"
 brew "reattach-to-user-namespace"
-brew "the_silver_searcher"
-brew "tmux"
-brew "vim"
+brew "macvim"
 brew "watchman"
 brew "zsh"
-
-# Heroku
-brew "heroku/brew/heroku"
-brew "parity"
 
 # GitHub
 brew "hub"
@@ -148,10 +141,6 @@ cask "gpg-suite"
 brew "postgres", restart_service: :changed
 brew "redis", restart_service: :changed
 EOF
-
-fancy_echo "Update heroku binary ..."
-brew unlink heroku
-brew link --force heroku
 
 fancy_echo "Configuring asdf version manager ..."
 if [ ! -d "$HOME/.asdf" ]; then
