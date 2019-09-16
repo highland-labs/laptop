@@ -124,6 +124,7 @@ brew "reattach-to-user-namespace"
 brew "macvim"
 brew "watchman"
 brew "zsh"
+brew "bat"
 
 # GitHub
 brew "hub"
