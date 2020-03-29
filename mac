@@ -140,6 +140,7 @@ cask "gpg-suite"
 
 # Databases
 brew "postgres", restart_service: :changed
+brew "elasticsearch", restart_service: :changed
 brew "redis", restart_service: :changed
 EOF
 
